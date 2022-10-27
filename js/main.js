@@ -6,15 +6,27 @@ const groceriesList = ["eggs", "flour", "sugar", "salt", "potatoes", "lemons", "
 // richiamo l'ID "list" dell'ul
 const listContainer = document.getElementById("list");
 
-// ciclo for 
-for (let i = 0; i < groceriesList.length; i++){
-    
-    // creo i li
-    const itemList = document.createElement("li");
+// dichiaro il punto di partenza
+let i = 0;
 
-    // inserisco gli alimenti dentro i li
-    itemList.innerHTML=groceriesList[i];
-
-    // insterisco l'elemento creato nell'html
-    listContainer.append(itemList);    
+// ciclo while 
+while (i < groceriesList.length){ // condizione del ciclo while: continua finchè non arrivi alla lunghezza dell'array  
+    const itemList = document.createElement("li"); //creo i li
+    itemList.innerHTML=groceriesList[i]; //inserisco l'alimento all'interno di ogni li
+    listContainer.append(itemList); // inserisco gli elemnti nell'html
+    i++; //incremento i di 1 
 }
+
+
+
+// for (let i = 0; i < groceriesList.length; i++){
+    
+   
+//     const itemList = document.createElement("li");
+
+
+//     itemList.innerHTML=groceriesList[i];
+
+  
+//     listContainer.append(itemList);    
+// }
